@@ -1,10 +1,10 @@
-use num_bigint::BigUint;
+use rug::{Integer, ops::Pow};
 
 fn main() {
-    let mut start = BigUint::from(2u32);
+    let mut start = Integer::from(2u32);
     let mut count = 0;
 
-    let prefix = BigUint::from(8675309u32);
+    let prefix = Integer::from(8675309u32);
     let prefix_str = prefix.to_string();
 
     loop {
