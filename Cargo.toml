@@ -12,3 +12,5 @@ rug = "1.19.2"
 lto = "fat"
 codegen-units = 1
 panic = "abort"
+# profiling
+debug = true

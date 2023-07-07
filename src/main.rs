@@ -1,9 +1,9 @@
-use rug::Integer;
-use std::io::Write;
+use rug::{Integer, ops::Pow};
+use std::{io::Write, env::args};
 
 fn main() {
-    let mut start = Integer::from(2);
-    let mut count = 0;
+    let mut count = args().nth(1).unwrap_or("0".to_string()).parse::<u32>().unwrap();
+    let mut start = Integer::from(2).pow(count);
 
     let stdout = std::io::stdout();
     let mut lock = stdout.lock();
