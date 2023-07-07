@@ -1,7 +1,10 @@
 use rug::{ops::Pow, Integer};
 use std::{env::args, io::Write};
 
-// highest so far has been 2^1326694
+#[global_allocator]
+static GLOBAL: mimalloc::MiMalloc = mimalloc::MiMalloc;
+
+// highest so far has been 2^1388848
 fn main() {
     let mut count = args()
         .nth(1)
