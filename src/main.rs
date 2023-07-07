@@ -4,7 +4,7 @@ use std::{env::args, io::Write};
 #[global_allocator]
 static GLOBAL: mimalloc::MiMalloc = mimalloc::MiMalloc;
 
-// highest so far has been 2^1388848
+// highest so far has been 2^2333833
 fn main() {
     let mut count = args()
         .nth(1)
